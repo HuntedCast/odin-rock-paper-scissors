@@ -50,5 +50,21 @@ function playRound(humanChoice, computerChoice) {
 
 let computerScore = 0;
 let humanScore = 0;
+let round = 1;
 
-playRound(getHumanChoice(), getComputerChoice());
+while (round < 6) {
+    console.log(`Round ${round}! The score is: You ${humanScore} - Computer ${computerScore}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    round++;
+}
+
+console.log(`Game over! Final score: You ${humanScore} - Computer ${computerScore}`);
+if (humanScore > computerScore) {
+    console.log("You win!");
+}
+else if (computerScore > humanScore) {
+    console.log("You lose!");
+}
+else {
+    console.log("It's a draw!");
+}
