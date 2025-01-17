@@ -38,7 +38,9 @@ function playRound(humanChoice, computerChoice) {
         return;
     }
 
-    if (humanChoice === "rock" && computerChoice === "scissors" || humanChoice === "paper" && computerChoice === "rock" || humanChoice === "scissors" && computerChoice === "paper") {
+    if (humanChoice === "rock" && computerChoice === "scissors" || 
+        humanChoice === "paper" && computerChoice === "rock" || 
+        humanChoice === "scissors" && computerChoice === "paper") {
         console.log(`You win! ${capitalize(humanChoice)} beats ${capitalize(computerChoice)}`);
         humanScore++;
     }
